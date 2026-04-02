@@ -1,0 +1,39 @@
+# 编译生成文件
+build/
+
+# 官方方案/词库/模型（不需要同步）
+*.schema.yaml
+*.dict.yaml
+wanxiang_algebra.yaml
+wanxiang_symbols.yaml
+*.gram
+
+# 官方资源目录（体积大且可从发行版恢复）
+opencc/
+backgrounds/
+fonts/
+dicts/
+
+# 运行时系统文件
+default.yaml
+installation.yaml
+version.txt
+weasel.yaml
+.DS_Store
+Thumbs.db
+
+# Lua 二进制与库（脚本文件本身允许同步）
+lua/charset.bin
+lua/librime.lua
+lua/lib/
+
+# 备份和临时文件
+*.backup
+*.bak
+*.tmp
+*.log
+*.backup.md
+
+# userdb 仅同步 .ldb 词频数据
+**/*.userdb/*
+!**/*.userdb/*.ldb
